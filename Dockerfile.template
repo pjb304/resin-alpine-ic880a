@@ -4,6 +4,7 @@ RUN apk update && apk add \
     bash \
     git && \
     git clone https://github.com/pjb304/ic880a-gateway.git && \
+    git checkout resin \
     cd ic880a-gateway && \
     ./install.sh remote
 
