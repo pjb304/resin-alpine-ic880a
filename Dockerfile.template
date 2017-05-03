@@ -1,10 +1,11 @@
-FROM resin/armhf-alpine:3.4 
+FROM resin/armhf-alpine:3.4
 
 RUN apk update && apk add \
     bash \
     git && \
     git clone -b resin https://github.com/pjb304/ic880a-gateway.git && \
     cd ic880a-gateway && \
+    git pull && \
     ./install.sh remote
 
 WORKDIR /opt/ttn-gateway/bin
